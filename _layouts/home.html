@@ -58,6 +58,7 @@
                 })
             }
         </script>
+        <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/MagicMarvMan/libtempconvert@v1.0-beta.1/libtempconvert.js"></script>
         <script type="application/javascript">
             let temp
             {% if site.weather_provider == "darksky" %}
@@ -66,7 +67,7 @@
                     .then((response) => {
                         return response.json()
                     }).then((json) => {
-                        temp = (json.currently.temperature - 32) / 1.8
+                        temp = fahrenheitToCelsius(json.currently.temperature)
                         $('#temperature').html(temp)
                         return temp
                     })
@@ -78,7 +79,7 @@
                     .then((response) => {
                         return response.json()
                     }).then((json) => {
-                        temp = (json.main.temp - 273.15)
+                        temp = kelvinToCelsius(json.main.temp)
                         $('#temperature').html(temp)
                         return temp
                     })
