@@ -42,7 +42,7 @@
                 marker = new google.maps.Marker({position: {lat: {{ site.city.coordinates.latitude }}, lng: {{ site.city.coordinates.longitude }}}, map: map})
                 infowindow = new google.maps.InfoWindow({
                     content: '<div id="content">' +
-                        '<p><b>{{ site.city.name }}</b></p>' +
+                        '<b>{{ site.city.name }}</b>' +
                         '</div>'
                 })
                 marker.addListener('click', function() {
