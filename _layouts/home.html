@@ -26,6 +26,7 @@
         <script type="application/javascript">
             let map
             let marker
+            let infowindow
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -39,6 +40,14 @@
                     fullscreenControl: false
                 })
                 marker = new google.maps.Marker({position: {lat: {{ site.city.coordinates.latitude }}, lng: {{ site.city.coordinates.longitude }}}, map: map})
+                infowindow = new google.maps.InfoWindow({
+                    content: '<div id="content">' +
+                        '<p><b>' + {{ site.city.name }} + '</b></p>' +
+                        '</div>'
+                })
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                })
             }
         </script>
         <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ site.google_key }}&callback=initMap" async defer></script>
