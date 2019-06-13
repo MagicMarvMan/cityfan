@@ -78,7 +78,7 @@
             {% endif %}
             {% if site.weather_provider == "openweathermap" %}
             function fetchTemperature() {
-                fetch("api.openweathermap.org/data/2.5/weather?lat={{ site.city.coordinates.latitude }}&lon={{ site.city.coordinates.longitude }}&appid={{ site.openweathermap_key }}")
+                fetch("https://api.openweathermap.org/data/2.5/weather?lat={{ site.city.coordinates.latitude }}&lon={{ site.city.coordinates.longitude }}&appid={{ site.openweathermap_key }}")
                     .then((response) => {
                         return response.json()
                     }).then((json) => {
