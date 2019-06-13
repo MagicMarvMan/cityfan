@@ -4,3 +4,7 @@ city:
   coordinates:
     latitude: 34.052235
     longitude: -118.243683
+
+keys:
+  google: ""
+  openweathermap: ""
