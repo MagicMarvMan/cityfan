@@ -25,11 +25,14 @@
         <script type="application/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
         <script type="application/javascript">
             let map
+            let marker
+
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: {{ site.city.coordinates.latitude }}, lng: {{ site.city.coordinates.longitude }}},
                     zoom: 8
                 })
+                marker = new google.maps.Marker({position: {lat: {{ site.city.coordinates.latitude }}, lng: {{ site.city.coordinates.longitude }}}, map: map})
             }
         </script>
         <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ site.google_key }}&callback=initMap" async defer></script>
