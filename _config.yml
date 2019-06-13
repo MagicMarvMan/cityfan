@@ -5,6 +5,4 @@ city:
     latitude: 34.052235
     longitude: -118.243683
 
-keys:
-  google: "AIzaSyB6A2uv899OkhGhbnHsExzu4fs-q8SvVNE"
-  openweathermap: ""
+google_key: "AIzaSyB6A2uv899OkhGhbnHsExzu4fs-q8SvVNE"
