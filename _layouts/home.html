@@ -62,7 +62,7 @@
             let temp
             {% if site.weather_provider == "darksky" %}
             function fetchTemperature() {
-                fetch("https://api.darksky.net/forecast/{{ site.darksky_key }}/{{ site.city.coordinates.latitude }},{{ site.city.coordinates.longitude }}")
+                fetch("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/{{ site.darksky_key }}/{{ site.city.coordinates.latitude }},{{ site.city.coordinates.longitude }}")
                     .then((response) => {
                         return response.json()
                     }).then((json) => {
