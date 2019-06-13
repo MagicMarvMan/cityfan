@@ -2,7 +2,7 @@ html,
 body,
 .container,
 .row,
-.col-lg-6,
+.col-lg,
 .map,
 #map {
     height: 100%;
