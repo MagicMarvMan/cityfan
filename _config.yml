@@ -6,7 +6,7 @@ city:
     longitude: -118.243683
 
 # Possible providers: OpenWeatherMap, DarkSky
-map_provider: "darksky"
+weather_provider: "darksky"
 
 google_key: "AIzaSyB6A2uv899OkhGhbnHsExzu4fs-q8SvVNE"
 darksky_key: "4112b003a8180fb231f39bb43bfe2562"
