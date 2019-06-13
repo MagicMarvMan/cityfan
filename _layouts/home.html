@@ -68,13 +68,23 @@
                     }).then((json) => {
                         temp = (json.currently.temperature - 32) / 1.8
                         $('#temperature').html(temp)
-                        return (json.currently.temperature - 32) / 1.8
+                        return temp
                     })
             }
             {% endif %}
             {% if site.weather_provider == "openweathermap" %}
-
+            function fetchTemperature() {
+                fetch("api.openweathermap.org/data/2.5/weather?lat={{ site.city.coordinates.latitude }}&lon={{ site.city.coordinates.longitude }}&appid={{ site.openweathermap_key }}")
+                    .then((response) => {
+                        return response.json()
+                    }).then((json) => {
+                        temp = (json.main.temp - 273.15)
+                        $('#temperature').html(temp)
+                        return temp
+                    })
+            }
             {% endif %}
+            fetchTemperature()
         </script>
         <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ site.google_key }}&callback=initMap" async defer></script>
     </body>
