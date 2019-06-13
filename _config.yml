@@ -5,4 +5,9 @@ city:
     latitude: 34.052235
     longitude: -118.243683
 
+# Possible providers: OpenWeatherMap, DarkSky
+map_provider: "darksky"
+
 google_key: "AIzaSyB6A2uv899OkhGhbnHsExzu4fs-q8SvVNE"
+darksky_key: "4112b003a8180fb231f39bb43bfe2562"
+openweathermap_key: "c9c236b1803dce09cec8b9e1d42ff285"
