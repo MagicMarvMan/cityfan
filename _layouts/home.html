@@ -23,8 +23,13 @@
                     <div class="temperature">
                         <p>
                             <center>
-                                <b>Temperature:</b><br>
-                                <span id="temperature">0.0</span> °C
+                                <p>
+                                    <b>Temperature:</b><br>
+                                    <span id="temperature">0.0</span> °C<br>
+                                    {% if site.weather_provider == "darksky" %}
+                                    <i>Powered by <a target="_blank" href="https://darksky.com">Dark Sky</a></i>
+                                    {% endif %}
+                                </p>
                             </center>
                         </p>
                     </div>
